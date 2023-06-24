@@ -46,6 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'applications.apps.ApplicationsConfig',
+    # 'tailwind',
+    # 'theme',
+    'django_browser_reload',
+    'crispy_forms',
+    "crispy_bootstrap4",
+  
+    
 ]
 
 MIDDLEWARE = [
@@ -56,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'digifigs_careers.urls'
@@ -140,5 +148,18 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+
 AUTH_USER_MODEL = 'users.CustomUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# TAILWIND_APP_NAME = 'theme'
+
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]
+#CRISPY_ALLOWED_TEMPLATE_PACKS = 'crispy'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# NPM_BIN_PATH = "C:/Program Files/nodejs/npm"
+
