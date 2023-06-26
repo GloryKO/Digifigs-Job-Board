@@ -23,7 +23,7 @@ def create_application(request):
         application_form = ApplicantForm(request.POST)
         if application_form.is_valid():
             application_form.save()
-            return render('job_portal:application_success')
+            return render(request,'applications/application_success.html')
     else:
         application_form = ApplicantForm()
         return render(request,'applications/create_application.html',{'application_form':application_form})
