@@ -1,0 +1,10 @@
+{% extends 'applications/base.html' %}
+{% load static %}
+  <title>Application Error</title>
+{% block content %}
+<div class="w3-container w3-content w3-center" style="max-width: 500px; margin: 0 auto; padding-top: 50px;">
+  <h2 class="w3-wide">Error In Application </h2>
+  <p class="w3-large">Try again <a href="{% url 'create_application' %}" class="w3-button w3-blue">Here</a></p>
+  {% comment %} <a href="{% url 'home' %}" class="w3-button w3-blue">Go to Home</a> {% endcomment %}
+</div>
+{% endblock %}
