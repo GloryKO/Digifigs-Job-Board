@@ -8,9 +8,9 @@ from django.views.generic import ListView, DetailView
 from .models import Applicants
 
 #handle the admin list of applicants
-class AdminApplicantListView(ListView):
+class ApplicantListView(ListView):
     model = Applicants
-    template_name = 'job_portal/admin_applicant_list.html'
+    template_name = 'applications/applicants_list.html'
     context_object_name = 'applicants'
 
 #handle the detail of a single applicant 

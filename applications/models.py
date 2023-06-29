@@ -20,12 +20,14 @@ class Role(models.Model):
     
     
 class Applicants(models.Model):
-    first_name= models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
+    full_name = models.CharField(max_length=500)
+    # last_name = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=20)
+    email = models.EmailField(max_length=255)
     resume_link = models.URLField()
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
