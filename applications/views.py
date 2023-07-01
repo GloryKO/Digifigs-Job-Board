@@ -7,19 +7,6 @@ from django.views.generic import ListView, DetailView
 
 from .models import Applicants
 
-#handle the admin list of applicants
-class ApplicantListView(ListView):
-    model = Applicants
-    template_name = 'applications/applicants_list.html'
-    context_object_name = 'applicants'
-
-#handle the detail of a single applicant 
-class AdminApplicantDetailView(DetailView):
-    model = Applicants
-    template_name = 'job_portal/admin_applicant_detail.html'
-    context_object_name = 'applicant'
-
-
 def create_application(request):
     if request.method == 'POST':
         application_form = ApplicantForm(request.POST)
